@@ -1,14 +1,3 @@
-「タイトルだけを黒文字にする」というご要望に合わせて、以下の修正を加えました。
-
-header h1（品証用サイト）の文字色を**黒（#000）**に変更。
-
-各セクションの h2（スプレッドシート、各種一覧表など）の文字色を**黒（#222）**に変更。
-
-リストの点（・）を消し、左側の余白を調整。
-
-以下が修正済みのコード一式です。そのままコピーしてお使いいただけます。
-
-HTML
 <!doctype html>
 <html lang="ja">
 <head>
@@ -20,8 +9,8 @@ HTML
   
   <style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:#f7f9fc;color:#222;line-height:1.6;margin:0}
-    /* ヘッダータイトルの色を黒に変更 */
     header{background:#fff;border-bottom:1px solid #ddd;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;position:sticky;top:0}
+    /* ヘッダータイトルの色を黒に変更 */
     header h1{margin:0;font-size:1.6rem;color:#000} 
     header img{height:40px}
     
@@ -29,13 +18,15 @@ HTML
     section{background:#fff;border-radius:8px;padding:16px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
     
     /* セクションの見出し色を黒に変更 */
-    h2{margin-top:0;color:#222;border-bottom: 2px solid #0072c6;padding-bottom: 4px;} 
+    h2{margin-top:0;color:#222;border-bottom: 2px solid #0072c6;padding-bottom: 4px;margin-bottom: 15px;} 
+    /* サブタイトルのスタイル */
+    h3{font-size: 1.1rem; color: #444; margin: 15px 0 8px 0; border-left: 4px solid #0072c6; padding-left: 8px;}
     
     a{color:#0072c6;text-decoration: none;}
     a:hover{text-decoration: underline;}
     
     /* リストの「・」を消し、余白を調整 */
-    ul{list-style: none; padding-left:0}
+    ul{list-style: none; padding-left:0; margin-top: 0;}
     li{margin-bottom: 8px;}
     
     iframe{width:100%;height:400px;border:1px solid #ccc;border-radius:6px}
@@ -54,7 +45,7 @@ HTML
       <ul>
         <li>
           <a href="https://docs.google.com/spreadsheets/d/1pSYP8NnDTJXXy_NOPbvI6dlzvFXDCmFnWDBE2K-W_d0/edit?gid=0#gid=0" target="_blank">
-            現場管理用スプレッドシート
+            ① 現場管理用スプレッドシート
           </a>
         </li>
       </ul>
@@ -65,22 +56,22 @@ HTML
       <ul>
         <li>
           <a href="https://docs.google.com/spreadsheets/d/10whYego8ECxDpgBy_-B28X7b098fyeeN84YUe498NLw/edit?gid=0#gid=0" target="_blank">
-            端子台情報、トルク管理
+            ① 端子台情報、トルク管理
           </a>
         </li>
         <li>
           <a href="https://docs.google.com/spreadsheets/d/1ijS3zGywf5cd_KXHHP2Lioj1tvHLlXUCjUrq8jR6JLQ/edit?gid=1917731127#gid=1917731127" target="_blank">
-            機器類の簡易情報
+            ② 機器類の簡易情報
           </a>
         </li>
         <li>
           <a href="https://docs.google.com/spreadsheets/d/1GbX7IEAG4xVSciI2i_d_PTJoD870t-5eqZ_-I_qzMEc/edit?gid=1847560937#gid=1847560937" target="_blank">
-            機器類に接続できる端子サイズの一覧表
+            ③ 機器類に接続できる端子サイズの一覧表
           </a>
         </li>
         <li>
           <a href="https://docs.google.com/spreadsheets/d/1_QB3zB18uyE8EiNKToXY6PfMWvY5mCub4cJynY7LGug/edit?gid=1567040699#gid=1567040699" target="_blank">
-            アナログ機器の抵抗値一覧
+            ④ アナログ機器の抵抗値一覧
           </a>
         </li>
       </ul>
@@ -88,20 +79,26 @@ HTML
 
     <section>
       <h2>シーケンス図面テンプレート</h2>
+      
+      <h3>１．雨水（エンジン）ポンプ</h3>
       <ul>
         <li>
           <a href="https://raw.githubusercontent.com/jqpyr862/-/main/pdfs/%E9%9B%A8%E6%B0%B4%E3%83%9D%E3%83%B3%E3%83%97%EF%BC%88%E3%83%A4%E3%83%B3%E3%83%9E%E3%83%BC%E3%80%81%E7%87%83%E6%96%99%E5%BC%81%E6%9C%89%E3%80%81%E3%82%AC%E3%83%90%E3%83%8A%E7%84%A1%EF%BC%89_612471%E5%90%89%E8%A6%8B.pdf" target="_blank">
-            雨水ポンプ（ヤンマー、燃料弁有、ガバナ無）
+            ① 雨水ポンプ（ヤンマー、燃料弁有、ガバナ無）
           </a>
         </li>
+      </ul>
+
+      <h3>２．各種電動ポンプ</h3>
+      <ul>
         <li>
           <a href="https://raw.githubusercontent.com/jqpyr862/-/main/pdfs/%E5%BA%8A%E6%8E%92%E6%B0%B4P%EF%BC%88H%E2%86%92L%E3%81%A71%E5%8F%B0%E3%80%81HH%E3%81%A72%E5%8F%B0%E3%80%81L%E3%81%A72%E5%8F%B0%E5%81%9C%E6%AD%A2%EF%BC%89_617374%E6%B7%B1%E9%87%8E.pdf" target="_blank">
-            床排水P（H→Lで1台、HHで2台、Lで2台停止）
+            ① 床排水P（H→Lで1台、HHで2台、Lで2台停止）
           </a>
         </li>
         <li>
           <a href="https://raw.githubusercontent.com/jqpyr862/-/main/pdfs/CCT%EF%BC%88%E3%82%B3%E3%83%B3%E3%83%89%E3%83%AB%E3%83%95%E3%82%A1%EF%BC%89%E8%B5%B7%E5%8B%95%E3%81%AE%E9%9B%BB%E5%8B%95%E6%A9%9F_612471%E5%90%89%E8%A6%8B.pdf" target="_blank">
-            CCT（コンドルファ）起動の電動機
+            ② CCT（コンドルファ）起動の電動機
           </a>
         </li>
       </ul>
@@ -110,21 +107,21 @@ HTML
     <section>
       <h2>現地試運転結果報告書について（作成方法や判定基準、考え方）</h2>
       <ul>
-        <li><a href="#" target="_blank">①表紙、目次（将来）</a></li>
-        <li><a href="https://drive.google.com/file/d/1HPlfhfm28MacDJRWjNznhy3Ao51H7sdf/view?usp=drive_link" target="_blank">②外観構造検査チェックシート（判定基準欄は、S1の方に聞き取りをして記入）</a></li>
-        <li><a href="#" target="_blank">③主回路チェックシート（将来）</a></li>
-        <li><a href="#" target="_blank">④ハードタイマー設定表（将来）</a></li>
-        <li><a href="#" target="_blank">⑤サーマル設定表（将来）</a></li>
-        <li><a href="#" target="_blank">⑥工業計器設定表（警報設定器）（将来）</a></li>
-        <li><a href="#" target="_blank">⑦計装ループ記録表（将来）</a></li>
+        <li><a href="#" target="_blank">① 表紙、目次（将来）</a></li>
+        <li><a href="https://drive.google.com/file/d/1HPlfhfm28MacDJRWjNznhy3Ao51H7sdf/view?usp=drive_link" target="_blank">② 外観構造検査チェックシート（判定基準欄は、S1の方に聞き取りをして記入）</a></li>
+        <li><a href="#" target="_blank">③ 主回路チェックシート（将来）</a></li>
+        <li><a href="#" target="_blank">④ ハードタイマー設定表（将来）</a></li>
+        <li><a href="#" target="_blank">⑤ サーマル設定表（将来）</a></li>
+        <li><a href="#" target="_blank">⑥ 工業計器設定表（警報設定器）（将来）</a></li>
+        <li><a href="#" target="_blank">⑦ 計装ループ記録表（将来）</a></li>
       </ul>
     </section>
 
     <section>
       <h2>リンク集</h2>
       <ul>
-        <li><a href="https://www.meti.go.jp" target="_blank">経産省関連</a></li>
-        <li><a href="https://example.com" target="_blank">その他お役立ちリンク（将来）</a></li>
+        <li><a href="https://www.meti.go.jp" target="_blank">① 経産省関連</a></li>
+        <li><a href="https://example.com" target="_blank">② その他お役立ちリンク（将来）</a></li>
       </ul>
     </section>
   </main>
